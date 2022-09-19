@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Metadatos de la pagina-->
+        <title>Biblioteca</title>
+        <meta charset="uft-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static '/main.css' %}">    
+        <link rel="icon" type="jpg" href="{% static '/imagenes/logo.jpg' %}">
+    </head>
+    <body>
+        <header>
+            <h1>Biblioteca</h1>
+            <div class="banner">
+                <figure>
+                    <!--imagen principal de la página-->
+                    <img src="{% static '/imagenes/banner.jpg' %}"
+                    width="100%" height="550px"
+                    alt="Personas leyendo libros">
+                </figure>
+            </div>
+        </header> 
+        <main>
+            <section class="busqueda_simple">
+                <!-- con el method get estamos diciendo que vamos a hacer una peticion pero lo podemos cambiar post, delete, etc -->
+                <form action="resultado.html" method="get">
+                    <!-- barra de busqueda en la cual se ingresa la informacion del cliente junto al botón buscar -->
+                    <input type="text" id="consulta" name="consulta" 
+                        style="height:30px; width: 400px; border: 2px solid rgb(18, 160, 211); text-align: center; font-weight: bold; font-size: medium;" 
+                        placeholder="Por favor escriba la palabra que desea buscar">
+                    <input type="submit" value="Buscar" style="height: 35px; font-weight: bold; font-size: medium;">
+                </form>
+            </section>
+            <section class="busqueda_avanzada">
+                <h2>Si desea puede escoger entre una de las categorias que se muestran a continuaci&oacuten:</h2>
+                    <!-- Conjunto de botones que discriminan la busqueda en el servidor -->                 
+                    <input type="radio" name="autor" value="1">Autor
+                    <input type="radio" name="titulo" value="2">T&iacutetulo
+                    <input type="radio" name="tema" value="3">Tema
+                    <input type="radio" name="editoria" value="3">Editorial<br>
+                
+                    Tipo de documento:
+                    <select name="tipo_documento">
+                        <option>Libro</option>
+                        <option>Revista</option>
+                        <option>Video</option>
+                        <option>Grabación</option>
+                    </select>
+            </section>
+        </main>
+    </body>
+</html>
+<!--imagen banner tomada de: https://www.freepik.es/vector-gratis/personas-que-utilizan-concepto-isometrico-horizontal-biblioteca-linea-azul-3d_7286383.htm-->
+<!--imagen logo tomado de: https://www.freepik.es/vector-gratis/libros-linea-biblioteca-concepto-plano-3d-isometrico-conocimiento-internet-web-linea-tecnologia-estudio-pantalla-computadora_10600325.htm-->

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Metadatos de la pagina-->
+        <title>Resultado</title>
+        <meta charset="uft-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="resultado.css">    
+        <link rel="icon" type="jpg" href="imagenes/logo.jpg">
+    
+    </head>
+    <body>
+        <header>
+            <div>
+                <p class="resultado_busqueda_simple">
+                    <input type="text" name="consulta" 
+                        style="height:30px; width: 400px; border: 2px solid rgb(18, 160, 211); text-align: center; font-weight: bold; font-size: medium;" 
+                        placeholder="Por favor escriba la palabra que desea buscar">
+                    <input type="button" value="Buscar" style="height: 35px; font-weight: bold; font-size: medium;border: 2px solid rgb(18, 160, 211);">
+                </p>
+        </header>
+        <main>
+            <section class="grid-container">
+                <div class="grid item">
+                    Título:<br>
+                    Autor:<br>
+                    Disponible:
+                </div>
+                <div class="grid item boton">
+                    <input type="text" name="Documento" size="40" placeholder="Por favor introduzca su numero de documento"><br>
+                    <input type="button" value="reservar">
+
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
+<!--Revisar como cargar la informacion del servidor en la pagina-->
+<!--Montar javascript donde se pueda adicionar el numero de documento del solicitante-->

@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 #se crea este array para almacenar todos los archivos css, javascript e imagenes
+#
 STATICFILES_DIRS=['G:/Mi unidad/Mision_tics/Ciclo 3/Proyecto biblioteca/myproject/myproject/static']
 
 # Application definition
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'api'
 ]
 
 MIDDLEWARE = [
@@ -78,8 +80,15 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mintic_ciclo3',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            'read_default_file': 'G:/Mi unidad/Mision_tics/Ciclo 3/Proyecto biblioteca/Base de datos/DB - Biblioteca - mySQL.sql',
+        },
     }
 }
 
@@ -106,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-CO'
 
 TIME_ZONE = 'UTC'
 

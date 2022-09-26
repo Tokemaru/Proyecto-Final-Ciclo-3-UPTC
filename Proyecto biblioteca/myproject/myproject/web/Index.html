@@ -24,7 +24,7 @@
         <main>
             <section class="busqueda_simple">
                 <!-- con el method get estamos diciendo que vamos a hacer una peticion pero lo podemos cambiar post, delete, etc -->
-                <form action="resultado.html" method="get">
+                <form action="resultado.html" method="get">{% csrf_token %}
                     <!-- barra de busqueda en la cual se ingresa la informacion del cliente junto al botón buscar -->
                     <input type="text" id="consulta" name="consulta" 
                         style="height:30px; width: 400px; border: 2px solid rgb(18, 160, 211); text-align: center; font-weight: bold; font-size: medium;" 

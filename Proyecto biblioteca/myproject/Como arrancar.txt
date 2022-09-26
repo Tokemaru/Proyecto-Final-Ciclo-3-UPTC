@@ -15,3 +15,8 @@ G:\Mi unidad\Mision_tics\Ciclo 3\Proyecto biblioteca\myproject>python manage.py 
 4. abra la pagina desde el navegador por medio del puerto 8000 asi:
 
 http://localhost:8000/index/
+
+usuario> Proyectobiblioteca
+correo> miguelangelantoniofernadez@gmail.com	
+Contrasena 123456
+
